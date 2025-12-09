@@ -61,11 +61,6 @@ class MainWindow(QMainWindow):
         self.submit_button.clicked.connect(self.search_song)
         
         
-        # Single result display (replaces QListWidget)
-        # self.result_label = QLabel("Search Result:")
-        # self.result_display = QLabel("No track found yet")
-        # self.result_display.setWordWrap(True)
-        
         # Store the current track result
         self.current_track = None
         self.lyrics = None
@@ -82,8 +77,6 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.t_input)
         layout.addWidget(self.label)
         layout.addWidget(self.submit_button)
-        # layout.addWidget(self.result_label)
-        # layout.addWidget(self.result_display)
 
         container = QWidget()
         container.setLayout(layout)
@@ -127,28 +120,6 @@ class MainWindow(QMainWindow):
             # Re-enable button
             self.submit_button.setEnabled(True)
             self.submit_button.setText("Search For Track")
-
-    # def display_result(self, track_data):
-    #     """Display single search result"""
-    #     if isinstance(track_data, dict):
-            # Format the display text
-            # display_text = f"<b>{track_data.get('track', 'Unknown Track')}</b><br>"
-            # display_text += f"Artist: {track_data.get('artist', 'Unknown Artist')}<br>"
-            # display_text += f"Album: {track_data.get('album', 'Unknown Album')}<br>"
-            
-            # if self.lyrics:
-            #     lyrics_preview = self.lyrics[:100] + "..." if len(self.lyrics) > 100 else self.lyrics
-            #     display_text += f"<br><i>Lyrics preview:</i><br>{lyrics_preview}"
-            # else:
-            #     display_text += "<br><i>No lyrics available</i>"
-            
-            # self.result_display.setText(display_text)
-            
-
-            
-        # else:
-        #     self.result_display.setText("No track found. Please try a different search.")
-        #     self.label.setText("Search completed - no results found")
 
     def display_prediction(self):
         """Open a new window to display lyrics"""
