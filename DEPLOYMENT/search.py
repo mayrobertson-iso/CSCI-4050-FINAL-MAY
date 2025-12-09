@@ -16,6 +16,7 @@ from datetime import datetime
 from thefuzz import fuzz
 from thefuzz import process
 
+# a file I have repurposed from another project. It is only here for the search functionality
 
 #--------------------------------SEARCH FUNCTION--------------------------------
 
