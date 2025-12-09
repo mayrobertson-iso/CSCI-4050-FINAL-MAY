@@ -1,0 +1,6 @@
+CSCI 4050U Final Project - Sentiment Analysis of Song Lyrics
+GROUP ID: 43
+Group Members- May Robertson (100751769)
+
+Machine Learning Model code in csci_final.py
+GUI deployment code in DEPLOYMENT folder. Launch the application by running torch_app.py
